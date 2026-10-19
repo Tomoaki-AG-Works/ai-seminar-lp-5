@@ -159,6 +159,18 @@ p { margin: 0 0 1em; }
 .statement h2 { font-size: clamp(24px, 3.6vw, 38px); }
 .statement .lead-text { margin-inline: auto; }
 
+/* now */
+.now { text-align: center; }
+.now h2 { font-size: clamp(24px, 3.6vw, 38px); }
+.now h2 em { font-style: normal; color: var(--cyan); }
+.now .lead-text { margin-inline: auto; }
+.leak-list { margin: 0 auto 28px; padding: 0; max-width: 520px; list-style: none; text-align: left; border: 1px solid var(--line); background: var(--panel); }
+.leak-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 22px; border-bottom: 1px solid var(--line); font-weight: 700; }
+.leak-list li:last-child { border-bottom: 0; }
+.leak-list .count { color: var(--cyan); font: 700 18px "Space Grotesk", "Noto Sans JP", sans-serif; white-space: nowrap; }
+.leak-list .more { justify-content: center; color: var(--muted); font-weight: 500; letter-spacing: .3em; padding: 8px 22px; }
+.now-note { margin: 18px auto 0; max-width: 760px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
 /* detail + apply */
 .entry { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: stretch; }
 .detail-box { padding: 34px 30px; border: 1px solid var(--line); background: var(--panel); }
@@ -326,11 +338,28 @@ p { margin: 0 0 1em; }
 
 <main>
 
+  <section id="now" class="alt now">
+    <div class="container reveal">
+      <p class="sec-label">NOW</p>
+      <h2><span class="nw">10月に公表された</span><span class="nw">個人情報の漏えいは、</span><span class="nw">主なものを足すだけで</span><span class="nw"><em>1億件規模</em>です。</span></h2>
+      <ul class="leak-list">
+        <li><span>ソースネクスト</span><span class="count">約2,252万件</span></li>
+        <li><span>バーガーキング</span><span class="count">約1,118万件</span></li>
+        <li><span>焼肉きんぐ</span><span class="count">約1,079万件</span></li>
+        <li><span>ヤマト運輸</span><span class="count">約526万件</span></li>
+        <li class="more" aria-hidden="true"><span>……</span></li>
+      </ul>
+      <p class="lead-text">身近なサービスの公表が、毎週のように続いています。</p>
+      <p class="lead-text">青森でも、市の防災メールの配信サービスが不正アクセスを受け、登録者の情報が漏れた可能性があると公表されました。国（個人情報保護委員会・IPA など）も相次いで注意を呼びかけています。</p>
+      <p class="now-note">※件数は各社の公表値（10月19日時点）。重複や「漏えいのおそれ」を含む単純合計です。</p>
+    </div>
+  </section>
+
   <section id="about" class="statement">
     <div class="container reveal">
       <p class="sec-label">ABOUT</p>
       <h2><span class="nw">セキュリティ、</span><span class="nw">何かしなきゃとは思っている。</span><br><span class="nw">でも、何をすればいいのか。</span></h2>
-      <p class="lead-text">AIの普及で、攻撃する側も変わりました。小さな会社も、もう他人事ではありません。</p>
+      <p class="lead-text">大手だけの話ではありません。使っているサービスや委託先が破られれば、小さな会社も同じことです。</p>
       <p class="lead-text">AI時代に考えるべきセキュリティを、60分で押さえる勉強会です。</p>
     </div>
   </section>
