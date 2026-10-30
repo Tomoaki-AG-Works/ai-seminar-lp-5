@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI活用実践セミナー 第5回 | AI時代に考えるべき「AIセキュリティ」</title>
-<meta name="description" content="八戸市倫理法人会主催 AI活用実践セミナー第5回（2026年10月29日開催）。AI時代に考えるべきセキュリティを、何から手をつければいいかまで60分で押さえる勉強会。参加費1,000円。">
-<meta property="og:title" content="AI活用実践セミナー 第5回 | AI時代に考えるべき「AIセキュリティ」">
-<meta property="og:description" content="何から手をつければいいかを押さえる60分。2026年10月29日(木) 19:00-20:00 YSアリーナ。">
+<title>AI活用実践セミナー 第5回 録画・開催報告 | AI時代に考えるべき「AIセキュリティ」</title>
+<meta name="description" content="八戸市倫理法人会主催 AI活用実践セミナー第5回（2026年10月29日開催）の録画・開催報告。攻撃がAIで速く・大量に・自然になった今、守りを「見抜く力」ではなく「社内の3つの決めごと」で受ける考え方を60分で扱いました。">
+<meta property="og:title" content="AI活用実践セミナー 第5回 録画・開催報告 | AI時代に考えるべき「AIセキュリティ」">
+<meta property="og:description" content="2026年10月29日(木) YSアリーナで開催。当日の60分を録画で公開しています。">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ytimg.com/vi/5VeEaKjRbyg/hqdefault.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <script>document.documentElement.className += ' js';</script>
 <style>
-/* 2026-10-27: 案内チラシ v2 に揃えた版。入口を「10月の漏えい件数」に置き直した。
+/* 2026-10-30: 開催報告版。告知版（チラシ v2 に揃えた 10-27 版）の配色と部品をそのまま使い、
+   ヒーローを録画に置き換えた。入口の件数は「当日の入口」として本文へ移した。
    地 #0A0F24 / 主 #48E0E8 / 開催情報は白面 / 紫 #8B6CFF は背景の光だけ */
 :root {
   --bg: #0a0f24;
@@ -105,57 +107,34 @@ h2, h3, .lead-text, .q { word-break: auto-phrase; }
 .hero-top .code { font: 700 12px/1 var(--mono); letter-spacing: .16em; }
 .hero-top .code em { font-style: normal; color: var(--cyan); }
 
-/* ① 入口: 件数 */
-.alert { padding: 26px 30px 22px; }
-.alert-body {
-  display: grid; grid-template-columns: auto 1fr; gap: 12px 44px; align-items: end;
-  margin-top: 14px;
+/* ① 何の会だったか */
+.head { margin-top: 26px; }
+.status {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin: 0 0 16px; padding: 5px 12px;
+  border: 1px solid var(--line-strong);
+  font: 700 12px/1.4 var(--mono); letter-spacing: .16em; color: var(--cyan);
 }
-.label { margin: 0; font-size: clamp(17px, 2.1vw, 24px); font-weight: 700; line-height: 1.5; letter-spacing: .05em; }
-.num { margin: 4px 0 0; display: flex; align-items: baseline; line-height: .9; white-space: nowrap; }
-.num .approx { font-size: clamp(22px, 2.8vw, 34px); font-weight: 700; margin-right: .2em; }
-.num .big {
-  font: 700 clamp(84px, 12.5vw, 150px)/.9 "Space Grotesk", sans-serif; letter-spacing: -.02em; color: var(--cyan);
-  text-shadow: 0 0 34px rgba(72, 224, 232, .35);
-}
-.num .unit { font-size: clamp(36px, 5vw, 58px); font-weight: 900; margin-left: .12em; letter-spacing: .02em; }
-.num .mark { font-size: clamp(13px, 1.3vw, 16px); font-weight: 700; color: var(--muted); margin-left: .3em; align-self: flex-start; }
-.bars-wrap { min-width: 0; }
-.bars { display: block; width: 100%; height: clamp(72px, 11vw, 132px); fill: var(--cyan); }
-.bars rect { opacity: .85; }
-.bar-cap {
-  margin: 6px 0 0; padding-top: 6px;
-  border-top: 1px solid var(--line-strong);
-  font-size: 13px; line-height: 1.5; color: var(--muted); letter-spacing: .04em;
-}
-.bar-cap b { color: var(--text); font-weight: 700; }
-.alert .note { margin: 16px 0 0; font-size: 12px; line-height: 1.7; color: var(--note); letter-spacing: .02em; }
-
-/* ② 何の会か */
-.what {
-  display: grid; grid-template-columns: 1fr 300px; gap: 24px 40px; align-items: end;
-  margin-top: 34px;
-}
-.what > div { min-width: 0; }
-.what .lead { margin: 0; font-size: clamp(16px, 2vw, 22px); font-weight: 500; letter-spacing: .18em; }
-.what h1 {
+.status .dot { width: 8px; height: 8px; border-radius: 50%; background: #ff5a6e; box-shadow: 0 0 10px rgba(255, 90, 110, .7); }
+.head .lead { margin: 0; font-size: clamp(16px, 2vw, 22px); font-weight: 500; letter-spacing: .18em; }
+.head h1 {
   margin: 2px 0 0 -.5em; /* 「 の左の空きを詰め、括弧の線を本文の左端に揃える */
   font-size: clamp(32px, 9.6vw, 76px); font-weight: 900; line-height: 1.15; letter-spacing: .01em; white-space: nowrap;
 }
-.what .q { margin: 14px 0 0; font-size: clamp(17px, 2vw, 21px); font-weight: 900; line-height: 1.65; letter-spacing: .02em; }
+.head .q { margin: 16px 0 0; font-size: clamp(16px, 1.9vw, 19px); font-weight: 700; line-height: 1.75; letter-spacing: .02em; color: #d9ddf5; }
 
-.gift { padding: 18px 20px 20px; border: 1px solid var(--line-strong); background: var(--panel); }
-.gift .k { margin: 0; font: 700 12px/1 var(--mono); letter-spacing: .16em; color: var(--cyan); }
-.gift .k span { font: 700 14px/1 "Noto Sans JP", sans-serif; letter-spacing: .04em; color: var(--text); margin-left: 10px; }
-.gift .tag2 {
-  display: inline-block; margin-top: 14px; padding: 3px 9px;
-  background: var(--cyan); color: var(--bg); font-size: 13px; font-weight: 900; line-height: 1.5; letter-spacing: .06em;
+/* ② 録画 */
+.video { margin-top: 30px; padding: 14px; }
+.video-frame {
+  position: relative; aspect-ratio: 16 / 9; background: #000;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 0 40px rgba(72, 224, 232, .18);
 }
-.gift .item { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
-.gift .item svg { flex: none; width: 40px; height: 46px; }
-.gift .item span { font-size: 19px; font-weight: 900; line-height: 1.45; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-caption { margin: 10px 0 0; font-size: 13px; line-height: 1.6; color: var(--muted); text-align: right; }
+.video-caption a { color: var(--cyan); }
 
-/* ③ 行動: 日時・会場・申込 */
+/* ③ 開催情報・資料 */
 .info {
   display: grid; grid-template-columns: 230px 1fr auto; align-items: center; gap: 0;
   margin-top: 30px; padding: 22px 28px 22px 0;
@@ -204,7 +183,55 @@ p { margin: 0 0 1em; }
 .statement .lead-text { margin-inline: auto; }
 .statement .sec-label { display: inline-block; }
 
-/* detail + apply */
+/* 当日の入口: 件数 */
+.alert { padding: 26px 30px 22px; }
+.alert-body {
+  display: grid; grid-template-columns: auto 1fr; gap: 12px 44px; align-items: end;
+  margin-top: 14px;
+}
+.label { margin: 0; font-size: clamp(17px, 2.1vw, 24px); font-weight: 700; line-height: 1.5; letter-spacing: .05em; }
+.num { margin: 4px 0 0; display: flex; align-items: baseline; line-height: .9; white-space: nowrap; }
+.num .approx { font-size: clamp(22px, 2.8vw, 34px); font-weight: 700; margin-right: .2em; }
+.num .big {
+  font: 700 clamp(84px, 12.5vw, 150px)/.9 "Space Grotesk", sans-serif; letter-spacing: -.02em; color: var(--cyan);
+  text-shadow: 0 0 34px rgba(72, 224, 232, .35);
+}
+.num .unit { font-size: clamp(36px, 5vw, 58px); font-weight: 900; margin-left: .12em; letter-spacing: .02em; }
+.num .mark { font-size: clamp(13px, 1.3vw, 16px); font-weight: 700; color: var(--muted); margin-left: .3em; align-self: flex-start; }
+.bars-wrap { min-width: 0; }
+.bars { display: block; width: 100%; height: clamp(72px, 11vw, 132px); fill: var(--cyan); }
+.bars rect { opacity: .85; }
+.bar-cap {
+  margin: 6px 0 0; padding-top: 6px;
+  border-top: 1px solid var(--line-strong);
+  font-size: 13px; line-height: 1.5; color: var(--muted); letter-spacing: .04em;
+}
+.bar-cap b { color: var(--text); font-weight: 700; }
+.alert .note { margin: 16px 0 0; font-size: 12px; line-height: 1.7; color: var(--note); letter-spacing: .02em; }
+
+/* 3つの決めごと・やること4つ */
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+.rule { padding: 26px 24px; border: 1px solid var(--line); background: var(--panel); }
+.rule .no { display: block; font: 700 44px/1 "Space Grotesk", sans-serif; color: var(--cyan); text-shadow: 0 0 24px rgba(72, 224, 232, .3); }
+.rule h3 { margin: 14px 0 10px; font-size: 19px; font-weight: 900; line-height: 1.55; }
+.rule p { margin: 0; font-size: 15px; color: #cfd4ef; }
+.todo {
+  margin-top: 28px; padding: 24px 28px;
+  background: var(--white-box); color: var(--ink); border-left: 8px solid var(--cyan);
+}
+.todo h3 { margin: 0 0 10px; font-size: 18px; font-weight: 900; }
+.todo ul { margin: 0; padding-left: 1.2em; font-weight: 500; }
+.todo li { margin: 4px 0; }
+.todo .help { margin: 14px 0 0; font-size: 14px; color: var(--ink-2); }
+
+/* 当日の流れ */
+.program { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: 860px; }
+.program li { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.program .part { font: 700 12px/1.9 var(--mono); letter-spacing: .16em; color: var(--cyan); }
+.program h3 { margin: 0; font-size: 18px; font-weight: 900; line-height: 1.5; }
+.program p { margin: 4px 0 0; font-size: 15px; color: #cfd4ef; }
+
+/* detail + materials */
 .entry { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: stretch; }
 .detail-box { padding: 34px 30px; border: 1px solid var(--line); background: var(--panel); }
 .detail-list { margin: 0; padding: 0; list-style: none; }
@@ -273,10 +300,9 @@ p { margin: 0 0 1em; }
 @media (max-width: 860px) {
   section { padding: 72px 0; }
   .alert-body { grid-template-columns: 1fr; gap: 14px; }
-  .what { grid-template-columns: 1fr; margin-top: 28px; }
-  .gift { max-width: 420px; }
   .info { grid-template-columns: auto 1fr; row-gap: 20px; padding: 22px 22px 22px 0; }
   .go { grid-column: 1 / -1; padding-left: 22px; align-items: stretch; }
+  .rules { grid-template-columns: 1fr; }
   .entry { grid-template-columns: 1fr; gap: 32px; }
   .past { grid-template-columns: repeat(2, 1fr); }
   .speaker { grid-template-columns: 1fr; gap: 20px; text-align: center; }
@@ -286,14 +312,17 @@ p { margin: 0 0 1em; }
 @media (max-width: 520px) {
   .hero-inner { padding: 16px 0 44px; }
   .hero-top { font-size: 12px; letter-spacing: .06em; margin-bottom: 14px; }
+  .head .lead { letter-spacing: .1em; }
+  .video { padding: 8px; }
   .alert { padding: 20px 18px 18px; }
   .brk > .c { width: 16px; height: 16px; }
-  .what .lead { letter-spacing: .1em; }
   .info { grid-template-columns: 1fr; padding: 20px 18px; }
   .when { padding: 0; }
   .when .d { font-size: 46px; }
   .info dl { border-left: 0; border-top: 1px solid #d6d9e6; padding: 16px 0 0; }
   .go { padding-left: 0; }
+  .todo { padding: 20px 18px; }
+  .program li { grid-template-columns: 1fr; gap: 2px; }
   .detail-list li { grid-template-columns: 1fr; gap: 2px; }
   .past { grid-template-columns: 1fr; }
   .button { width: 100%; }
@@ -321,51 +350,34 @@ p { margin: 0 0 1em; }
 
     <div class="hero-top">
       <span><b>八戸市倫理法人会</b> 主催　AI活用実践セミナー 第5回</span>
-      <span class="code">AI SEMINAR <em>VOL.05</em></span>
+      <span class="code">AI SEMINAR <em>VOL.05</em> — REPORT</span>
     </div>
 
-    <div class="alert brk">
+    <div class="head">
+      <p class="status"><span class="dot" aria-hidden="true"></span>開催報告 ／ 録画公開中</p>
+      <p class="lead">AI時代に考えるべき</p>
+      <h1>「AIセキュリティ」</h1>
+      <p class="q"><span class="nw">2026年10月29日(木)、</span><span class="nw">YSアリーナで第5回を開催しました。</span><br><span class="nw">当日の60分を、</span><span class="nw">録画でご覧いただけます。</span></p>
+    </div>
+
+    <div class="video brk">
       <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
-      <p class="tag">INCIDENT LOG 2026.10</p>
-      <div class="alert-body">
-        <div>
-          <p class="label">10月に公表された、<span class="nw">個人情報などの漏えい</span></p>
-          <p class="num"><span class="approx">約</span><span class="big">2.6</span><span class="unit">億件</span><span class="mark" aria-hidden="true">※</span></p>
-        </div>
-        <div class="bars-wrap">
-          <svg class="bars" viewBox="0 0 287 100" preserveAspectRatio="none" role="img" aria-label="29社の件数の内訳（多い順の棒グラフ）"><rect x="0" y="0.00" width="7" height="100.00"/><rect x="10" y="3.01" width="7" height="96.99"/><rect x="20" y="57.69" width="7" height="42.31"/><rect x="30" y="72.50" width="7" height="27.50"/><rect x="40" y="77.88" width="7" height="22.12"/><rect x="50" y="79.00" width="7" height="21.00"/><rect x="60" y="79.73" width="7" height="20.27"/><rect x="70" y="83.61" width="7" height="16.39"/><rect x="80" y="87.79" width="7" height="12.21"/><rect x="90" y="88.01" width="7" height="11.99"/><rect x="100" y="88.37" width="7" height="11.63"/><rect x="110" y="88.73" width="7" height="11.27"/><rect x="120" y="90.12" width="7" height="9.88"/><rect x="130" y="91.63" width="7" height="8.37"/><rect x="140" y="91.64" width="7" height="8.36"/><rect x="150" y="92.11" width="7" height="7.89"/><rect x="160" y="92.70" width="7" height="7.30"/><rect x="170" y="93.03" width="7" height="6.97"/><rect x="180" y="93.50" width="7" height="6.50"/><rect x="190" y="94.09" width="7" height="5.91"/><rect x="200" y="94.11" width="7" height="5.89"/><rect x="210" y="95.30" width="7" height="4.70"/><rect x="220" y="95.89" width="7" height="4.11"/><rect x="230" y="95.95" width="7" height="4.05"/><rect x="240" y="96.56" width="7" height="3.44"/><rect x="250" y="96.74" width="7" height="3.26"/><rect x="260" y="97.63" width="7" height="2.37"/><rect x="270" y="98.03" width="7" height="1.97"/><rect x="280" y="98.12" width="7" height="1.88"/></svg>
-          <p class="bar-cap">100万件以上の <b>29社</b>（件数の多い順）</p>
-        </div>
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/5VeEaKjRbyg" title="第5回AI勉強会_AI時代に考えるべき「AIセキュリティ」" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <p class="note">※ 10月1〜27日公表・100万件以上の29社の公表値の単純合計（258,983,177件）。重複・延べ・「漏えいのおそれ」を含み、人数ではありません。</p>
     </div>
-
-    <div class="what">
-      <div>
-        <p class="lead">AI時代に考えるべき</p>
-        <h1>「AIセキュリティ」</h1>
-        <p class="q"><span class="nw">セキュリティ、</span><span class="nw">何かしなきゃとは思っている。</span><br><span class="nw">でも、何をすればいいのか。</span></p>
-      </div>
-      <aside class="gift" aria-label="参加者へのプレゼント">
-        <p class="k">GIFT<span>参加者にプレゼント</span></p>
-        <span class="tag2">最新脆弱性対応</span>
-        <div class="item">
-          <svg viewBox="0 0 24 28" aria-hidden="true"><path d="M12 1.5 22 5.5v8c0 6.4-4.2 10.9-10 13-5.8-2.1-10-6.6-10-13v-8z" fill="none" stroke="#48e0e8" stroke-width="1.8" stroke-linejoin="round"/><path d="m7.5 14 3.2 3.2 6-6.4" fill="none" stroke="#48e0e8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>PCセキュリティ<br>チェックツール</span>
-        </div>
-      </aside>
-    </div>
+    <p class="video-caption">再生できない場合は <a href="https://youtu.be/5VeEaKjRbyg" target="_blank" rel="noopener">YouTube で直接ご覧ください</a></p>
 
     <div class="info">
       <p class="when"><span class="y">2026</span><span class="d">10.29<small>木</small></span><span class="t">19:00–20:00</span></p>
       <dl>
         <dt>会場</dt><dd>YSアリーナ</dd>
-        <dt>参加費</dt><dd>1,000円</dd>
-        <dt>定員</dt><dd>30名</dd>
+        <dt>講師</dt><dd>奥田 倫明</dd>
+        <dt>主催</dt><dd>八戸市倫理法人会</dd>
       </dl>
       <div class="go">
-        <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_evHD5tQKX80naT-9RSOFJdsWHTu1mztD38FXpD7m9ugVww/viewform" target="_blank" rel="noopener">参加を申し込む</a>
-        <small>申込フォームが開きます（1分ほど）</small>
+        <a class="button button-primary" href="https://drive.google.com/file/d/1BAdefscgDEdOeb-gDWdi4jzF9LR-kzY2/view" target="_blank" rel="noopener">スライドを見る</a>
+        <small>当日のスライド（PDF・43ページ）</small>
       </div>
     </div>
 
@@ -379,11 +391,84 @@ p { margin: 0 0 1em; }
       <p class="sec-label">ABOUT</p>
       <h2><span class="nw">攻撃は、AIで速く・</span><span class="nw">大量に・自然になりました。</span></h2>
       <p class="lead-text">大手だけの話ではありません。使っているサービスや委託先が破られれば、小さな会社も同じことです。</p>
-      <p class="lead-text">AI時代に考えるべきセキュリティを、60分で押さえる勉強会です。</p>
+      <p class="lead-text">第5回では、守りを「見抜く力」ではなく「社内の決めごと」で受ける考え方を、60分で押さえました。</p>
     </div>
   </section>
 
-  <section id="entry">
+  <section id="opening">
+    <div class="container">
+      <p class="sec-label reveal">OPENING</p>
+      <h2 class="reveal">当日は、この数字から始めました。</h2>
+      <div class="alert brk reveal">
+        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <p class="tag">INCIDENT LOG 2026.10</p>
+        <div class="alert-body">
+          <div>
+            <p class="label">10月に公表された、<span class="nw">個人情報などの漏えい</span></p>
+            <p class="num"><span class="approx">約</span><span class="big">2.6</span><span class="unit">億件</span><span class="mark" aria-hidden="true">※</span></p>
+          </div>
+          <div class="bars-wrap">
+            <svg class="bars" viewBox="0 0 287 100" preserveAspectRatio="none" role="img" aria-label="29社の件数の内訳（多い順の棒グラフ）"><rect x="0" y="0.00" width="7" height="100.00"/><rect x="10" y="3.01" width="7" height="96.99"/><rect x="20" y="57.69" width="7" height="42.31"/><rect x="30" y="72.50" width="7" height="27.50"/><rect x="40" y="77.88" width="7" height="22.12"/><rect x="50" y="79.00" width="7" height="21.00"/><rect x="60" y="79.73" width="7" height="20.27"/><rect x="70" y="83.61" width="7" height="16.39"/><rect x="80" y="87.79" width="7" height="12.21"/><rect x="90" y="88.01" width="7" height="11.99"/><rect x="100" y="88.37" width="7" height="11.63"/><rect x="110" y="88.73" width="7" height="11.27"/><rect x="120" y="90.12" width="7" height="9.88"/><rect x="130" y="91.63" width="7" height="8.37"/><rect x="140" y="91.64" width="7" height="8.36"/><rect x="150" y="92.11" width="7" height="7.89"/><rect x="160" y="92.70" width="7" height="7.30"/><rect x="170" y="93.03" width="7" height="6.97"/><rect x="180" y="93.50" width="7" height="6.50"/><rect x="190" y="94.09" width="7" height="5.91"/><rect x="200" y="94.11" width="7" height="5.89"/><rect x="210" y="95.30" width="7" height="4.70"/><rect x="220" y="95.89" width="7" height="4.11"/><rect x="230" y="95.95" width="7" height="4.05"/><rect x="240" y="96.56" width="7" height="3.44"/><rect x="250" y="96.74" width="7" height="3.26"/><rect x="260" y="97.63" width="7" height="2.37"/><rect x="270" y="98.03" width="7" height="1.97"/><rect x="280" y="98.12" width="7" height="1.88"/></svg>
+            <p class="bar-cap">100万件以上の <b>29社</b>（件数の多い順）</p>
+          </div>
+        </div>
+        <p class="note">※ 10月1〜27日公表・100万件以上の29社の公表値の単純合計（258,983,177件）。重複・延べ・「漏えいのおそれ」を含み、人数ではありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="takeaway" class="alt">
+    <div class="container">
+      <p class="sec-label reveal">TAKEAWAY</p>
+      <h2 class="reveal">社内の3つの決めごと</h2>
+      <p class="lead-text reveal">見抜けなくても、止められる。会場では、この3つを持ち帰っていただきました。</p>
+      <div class="rules reveal">
+        <div class="rule">
+          <span class="no">01</span>
+          <h3>お金・口座・QRコードの話は、メールやLINEだけで動かない</h3>
+          <p>電話か対面で本人に確かめる。社長から社員へ「私はメールやLINEで送金を指示しない」と伝え、送金は2人で確認するルールにします。</p>
+        </div>
+        <div class="rule">
+          <span class="no">02</span>
+          <h3>AIに入れるものを決める</h3>
+          <p>学習に使う設定はオフ。中国製のAIは使わない。会社で使うなら法人契約。「使ってよいAI」「入れてよいもの」を紙1枚にして社員に渡します。</p>
+        </div>
+        <div class="rule">
+          <span class="no">03</span>
+          <h3>顧客情報は、AIではなく「AIで作ったアプリ」の側へ</h3>
+          <p>アプリはダミーデータで作り、実データはAIに読ませない。作ったアプリは外に公開しません。</p>
+        </div>
+      </div>
+      <div class="todo reveal">
+        <h3>一人ひとりが、やること4つ</h3>
+        <ul>
+          <li>パソコン・スマホ・ソフトを最新に更新する</li>
+          <li>会社のメールとネットバンキングは2段階認証。使えるところはパスキー</li>
+          <li>届いた連絡が本当か、公式のサイト・電話で確かめる</li>
+          <li>怪しい連絡・サイトは開かない</li>
+        </ul>
+        <p class="help">迷ったら、警察相談専用電話 <b>#9110</b>。メールの指示に従わず、社内で共有してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="container">
+      <p class="sec-label reveal">PROGRAM</p>
+      <h2 class="reveal">当日の流れ</h2>
+      <ol class="program reveal">
+        <li><span class="part">INTRO</span><div><h3>今、世の中で起きていること</h3><p>事故は遠い大企業の話ではありません。世界の大企業から地元・委託先、そして社長の名前を使う詐欺へ、距離を詰めて見ました。</p></div></li>
+        <li><span class="part">PART 1</span><div><h3>大手と私たちは狙われ方が違う</h3><p>大手は狙い撃ちされ、中小は網にかかる。AIで、その網が世界中から投げられるようになりました。</p></div></li>
+        <li><span class="part">PART 2</span><div><h3>ニセ社長詐欺の手口と実例</h3><p>社長の名前を使ったメールが、小さな会社にも届いています。見抜く力に頼らず、手口を知って止めます。</p></div></li>
+        <li><span class="part">PART 3</span><div><h3>まず身を守る</h3><p>お金が動く手前に「別の経路」を1本挟めば、この詐欺は成立しません。</p></div></li>
+        <li><span class="part">PART 4</span><div><h3>AIを使う側の作法</h3><p>AIの事故は「使い方」から起きています。会社として、どのAIに何を入れてよいかを決めます。</p></div></li>
+        <li><span class="part">PART 5</span><div><h3>顧客情報を扱うテクニック</h3><p>顧客情報はAIではなく、AIに作らせたアプリの側に置く。ただし、そのアプリは外に公開しません。</p></div></li>
+        <li><span class="part">Q&amp;A</span><div><h3>質疑・まとめ</h3><p>会場からの質問に答え、持ち帰りの3つの決めごとを確認しました。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="materials" class="alt">
     <div class="container entry">
       <div class="detail-box reveal">
         <p class="sec-label">EVENT DETAIL</p>
@@ -393,20 +478,20 @@ p { margin: 0 0 1em; }
           <li><span class="detail-label">DATE</span><span class="detail-value">2026年10月29日(木) 19:00-20:00</span></li>
           <li><span class="detail-label">PLACE</span><span class="detail-value">YSアリーナ</span></li>
           <li><span class="detail-label">FEE</span><span class="detail-value">1,000円</span></li>
-          <li><span class="detail-label">SEATS</span><span class="detail-value">30名</span></li>
           <li><span class="detail-label">ORGANIZER</span><span class="detail-value">八戸市倫理法人会</span></li>
         </ul>
       </div>
       <div class="apply-panel reveal">
-        <p class="sec-label">ENTRY</p>
-        <h3>お申し込みは<br>フォームから</h3>
-        <p>1分ほどで完了します。<br>席に限りがありますので、お早めにどうぞ。</p>
-        <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_evHD5tQKX80naT-9RSOFJdsWHTu1mztD38FXpD7m9ugVww/viewform" target="_blank" rel="noopener">参加を申し込む</a>
+        <p class="sec-label">MATERIALS</p>
+        <h3>当日のスライド</h3>
+        <p>43ページのPDFです。<br>数字と事例の出典は、各ページの下にあります。</p>
+        <a class="button button-primary" href="https://drive.google.com/file/d/1BAdefscgDEdOeb-gDWdi4jzF9LR-kzY2/view" target="_blank" rel="noopener">スライドを見る</a>
+        <p>ご参加の方には、持ち帰りメモとPCセキュリティチェックツールをメールでお送りしています。</p>
       </div>
     </div>
   </section>
 
-  <section class="alt">
+  <section>
     <div class="container">
       <p class="sec-label reveal">SPEAKER</p>
       <h2 class="reveal">講師・ファシリテーター</h2>
@@ -426,7 +511,7 @@ p { margin: 0 0 1em; }
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="container">
       <p class="sec-label reveal">ARCHIVE</p>
       <h2 class="reveal">これまでの回</h2>
@@ -441,18 +526,18 @@ p { margin: 0 0 1em; }
 
   <section class="cta">
     <div class="container reveal">
-      <p class="sec-label">JOIN US</p>
-      <h2>「何かしなきゃ」を、<br>今日で終わりに。</h2>
-      <p>AI時代のセキュリティを、60分で押さえます。</p>
+      <p class="sec-label">NEXT STEP</p>
+      <h2>まず1つだけ、<br>今週のうちに。</h2>
+      <p><span class="nw">最新に更新する。</span><span class="nw">2段階認証を付ける。</span><span class="nw">お金の話は電話か対面で確かめる。</span><br><span class="nw">どれか1つで構いません。</span></p>
       <div class="cta-actions">
-        <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_evHD5tQKX80naT-9RSOFJdsWHTu1mztD38FXpD7m9ugVww/viewform" target="_blank" rel="noopener">参加を申し込む</a>
+        <a class="button button-primary" href="https://youtu.be/5VeEaKjRbyg" target="_blank" rel="noopener">録画をもう一度見る</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">&copy; 2026 HACHINOHE RINRI HOJINKAI — AI SEMINAR VOL.5</footer>
+<footer class="footer">&copy; 2026 HACHINOHE RINRI HOJINKAI — AI SEMINAR VOL.5 REPORT</footer>
 
 <script>
 (function () {
